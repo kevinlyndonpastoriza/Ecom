@@ -1,0 +1,192 @@
+# Gitignore file for ASP.NET (Core/Framework) + Angular project
+# with Visual Studio, VS Code, and Entity Framework
+#-------------------------------------------------------------------------------
+# O S   F I L E S
+#-------------------------------------------------------------------------------
+*.swp
+*~
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files created by diff/patch tools
+*.orig
+
+#-------------------------------------------------------------------------------
+# B U I L D / C O M P I L E D   A R T I F A C T S
+#-------------------------------------------------------------------------------
+# .NET / Visual Studio Build Results
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+Build/
+build/
+BuildLog.*
+*.[Pp]db
+*.[Ll]og
+*.tlog
+
+# NuGet Packages
+packages/
+project.lock.json
+project.assets.json
+*.nupkg
+
+# Angular / Node.js build output folder (adjust if your output path is different)
+dist/
+wwwroot/
+
+# wwwroot/dist (if Angular builds directly into wwwroot subfolder)
+**/wwwroot/dist/
+**/wwwroot/out-tsc/
+
+# TypeScript build output / cache
+*.tsbuildinfo
+*.js.map
+
+# Build files for other frontend tools
+.parcel-cache/
+.cache/
+
+# Ignore bundler config
+.bundle/
+
+#-------------------------------------------------------------------------------
+# E D I T O R S   &   I D E S
+#-------------------------------------------------------------------------------
+# Visual Studio cache files and user-specific settings
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.settings
+
+# Visual Studio Code cache and settings
+.vscode/
+# Uncomment specific files below if you *do* want to track them for project consistency:
+# !.vscode/settings.json
+# !.vscode/launch.json
+# !.vscode/tasks.json
+# !.vscode/extensions.json
+
+# ReSharper is a common extension
+_ReSharper*/
+*.[Rr]esharper
+*.DotSettings.user
+
+# Optional: Editor directories/configuration
+# .idea/
+
+#-------------------------------------------------------------------------------
+# P A C K A G E   M A N A G E R S
+#-------------------------------------------------------------------------------
+# Node.js / NPM / Yarn Dependency directories
+node_modules/
+
+# Angular cache/temp folder
+.angular/
+
+#-------------------------------------------------------------------------------
+# T E S T S / C O V E R A G E / P R O F I L I N G
+#-------------------------------------------------------------------------------
+# Test Results
+TestResults/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# Visual Studio profiling files
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio code metrics results file
+*.vcperf.*
+
+#-------------------------------------------------------------------------------
+# C O N F I G U R A T I O N   &   S E C R E T S
+#-------------------------------------------------------------------------------
+**/secrets.json
+**/secrets.*.json
+**/secrets.user.*
+
+*.runtimeconfig.dev.json
+*.runtimeconfig.local.json
+
+# Uncomment if you want to ignore local development settings (recommended)
+# appsettings.Development.json
+# appsettings.local.json
+
+applicationhost.config
+
+*.PublishSettings
+
+.env*
+!.env.example
+
+#-------------------------------------------------------------------------------
+# D A T A B A S E S   &   E N T I T Y   F R A M E W O R K
+#-------------------------------------------------------------------------------
+*.bak
+*.mdf
+*.ldf
+*.ndf
+*.sqlite
+*Snapshot.cs
+
+#-------------------------------------------------------------------------------
+# P U B L I S H I N G
+#-------------------------------------------------------------------------------
+*.pubxml
+*.publishproj
+publish/
+*.vsix
+*.vsixmanifest
+**/ApplicationParameters/
+**/PublishProfiles/
+**/sfproj.user
+
+#-------------------------------------------------------------------------------
+# O T H E R
+#-------------------------------------------------------------------------------
+.vagrant/
+.history/
+*.Generated.cs
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
