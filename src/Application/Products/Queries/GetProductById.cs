@@ -1,0 +1,21 @@
+﻿using Domain.Entities;
+using Domain.Interfaces;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.Products.Queries
+{
+    public record GetProductByIdQuery(Guid employeeId) : IRequest<Product>;
+    internal class GetProductByIdHandler(IProductRepository productRepository)
+        : IRequestHandler<GetProductByIdQuery, Product>
+    {
+        public async Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
+        {
+            return await productRepository.GetProductByIdAsync(request.employeeId);
+        }
+    }
+}
