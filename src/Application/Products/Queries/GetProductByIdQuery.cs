@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Application.Products.Queries
 {
     public record GetProductByIdQuery(Guid productId) : IRequest<Product>;
-    internal class GetProductByIdHandler(IProductRepository productRepository)
+    internal class GetProductByIdQueryHandler(IProductRepository productRepository)
         : IRequestHandler<GetProductByIdQuery, Product>
     {
         public async Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
