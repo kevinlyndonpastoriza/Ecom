@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Application.Products.Queries
 {
-    public record GetProductByIdQuery(Guid employeeId) : IRequest<Product>;
+    public record GetProductByIdQuery(Guid productId) : IRequest<Product>;
     internal class GetProductByIdHandler(IProductRepository productRepository)
         : IRequestHandler<GetProductByIdQuery, Product>
     {
         public async Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
         {
-            return await productRepository.GetProductByIdAsync(request.employeeId);
+            return await productRepository.GetProductByIdAsync(request.productId);
         }
     }
 }
