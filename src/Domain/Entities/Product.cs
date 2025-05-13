@@ -23,6 +23,7 @@
         public Brand? Brand { get; set; }
 
         public List<ProductImage> ProductImages { get; set; } = new();
+        public List<Category> Categories { get; set; } = new();
         public List<ProductTag> Tags { get; set; } = new();
     }
 }
