@@ -14,6 +14,6 @@ namespace Infrastructure.Data
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Brand> Brands { get; set; }
-        public DbSet<Brand> Category { get; set; }
+        public DbSet<Brand> Categories { get; set; }
     }
 }
