@@ -19,6 +19,9 @@
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        public Guid? BrandId { get; set; }
+        public Brand? Brand { get; set; }
+
         public List<ProductImage> ProductImages { get; set; } = new();
         public List<ProductTag> Tags { get; set; } = new();
     }
