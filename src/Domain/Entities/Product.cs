@@ -20,5 +20,6 @@
         public DateTime UpdatedAt { get; set; }
 
         public List<ProductImage> ProductImages { get; set; } = new();
+        public List<ProductTag> Tags { get; set; } = new();
     }
 }
