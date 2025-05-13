@@ -36,11 +36,39 @@ namespace Infrastructure.Data.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "ProductImage",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Url = table.Column<string>(type: "text", nullable: false),
+                    Alt = table.Column<string>(type: "text", nullable: true),
+                    ProductId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductImage", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductImage_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductImage_ProductId",
+                table: "ProductImage",
+                column: "ProductId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ProductImage");
+
             migrationBuilder.DropTable(
                 name: "Products");
         }
